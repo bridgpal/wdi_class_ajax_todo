@@ -1,0 +1,4 @@
+ <li data-id="<%= todo.id %>">
+  <%= todo.name %> - <%= todo.completed %> (our partial)
+  <%= link_to "Delete Me", todo_path(todo), :method => "delete", :remote => true %>
+ </li>

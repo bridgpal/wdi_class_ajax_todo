@@ -1,0 +1,20 @@
+<h1>Todos#index</h1>
+
+<!-- A form for entering information about the todo -->
+<%= form_for @todo, :remote => true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+<hr>
+<!-- List out all the items in our todo list -->
+<div id="todos_all">
+  <% @todos.each do |t| %>
+
+    <!-- Render our partial -->
+    <%= render t %>
+
+  <% end %>
+</div>
