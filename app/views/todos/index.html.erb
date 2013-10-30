@@ -1,5 +1,5 @@
 <h1>Todos#index</h1>
-
+<%= ENV["SECRET_API_KEY"] %>
 <!-- A form for entering information about the todo -->
 <%= form_for @todo, :remote => true do |f| %>
   <%= f.label :name %>
